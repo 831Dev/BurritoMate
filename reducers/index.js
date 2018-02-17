@@ -18,6 +18,19 @@ const navReducer = handleActions({
             state
         );
         return nextState || state;
+    },
+    'Favorites': (state = initialState, action) => {
+        const nextState = AppNavigator.router.getStateForAction(
+            NavigationActions.navigate({ routeName: 'Favorites' }),
+            state
+        )
+        return nextState || state;
+    },
+    [NavigationActions.NAVIGATE]: (state =  initialState, action) => {
+        return AppNavigator.router.getStateForAction(
+            NavigationActions.navigate({ routeName: action.routeName }),
+            state
+        );
     }
 }, initialState)
 

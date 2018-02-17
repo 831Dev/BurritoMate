@@ -8,7 +8,6 @@ import {
 } from 'react-navigation-redux-helpers';
 import createSagaMiddleware from 'redux-saga';
 import appReducer from './reducers';
-import navigationSaga from './sagas/navigation';
 
 const navigationMiddleware = createReactNavigationReduxMiddleware(
     'root',
@@ -23,7 +22,5 @@ const store = createStore(
     appReducer,
     applyMiddleware(...middleware)
 );
-
-sagaMiddleware.run(navigationSaga);
 
 export default store;

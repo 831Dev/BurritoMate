@@ -6,10 +6,11 @@ import { NavigationActions } from 'react-navigation';
 
 class Home extends React.Component {
 
-    componentDidMount = () => setTimeout(() => {
-        console.log(this.props);
-        this.props.navigation.dispatch({ type: 'Cards'})
-    }, 3000);
+    componentDidMount = () => {
+        setTimeout(() => {
+            this.props.navigation.dispatch({ type: 'Cards'})
+        }, 1000);
+    }
 
     render() {
         return (

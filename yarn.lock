@@ -4303,6 +4303,10 @@ oauth-sign@~0.8.1, oauth-sign@~0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
 
+oauthsimple@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/oauthsimple/-/oauthsimple-0.0.1.tgz#bc11b878a303891464ba405ac552536b0a7ee7b2"
+
 object-assign@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-3.0.0.tgz#9bedd5ca0897949bca47e7ff408062d549f587f2"
@@ -4874,6 +4878,10 @@ react-native-gesture-handler@1.0.0-alpha.39:
 react-native-maps@0.19.0:
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.19.0.tgz#ce94fad1cf360e335cb4338a68c95f791e869074"
+
+react-native-material-bottom-navigation@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/react-native-material-bottom-navigation/-/react-native-material-bottom-navigation-0.8.1.tgz#07b115e2215d356f4780a892008a65ab6862a28e"
 
 react-native-safe-area-view@^0.6.0:
   version "0.6.0"

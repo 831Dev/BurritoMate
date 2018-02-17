@@ -5,7 +5,6 @@ import {
 import Store from './store';
 import Root from './components/Root';
 
-console.log(Store);
 class App extends React.Component {
   render() {
     return (
