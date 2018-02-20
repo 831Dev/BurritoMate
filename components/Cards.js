@@ -1,10 +1,11 @@
 import React from 'react';
 import uuid from 'uuid/v4';
-import getDirections from 'react-native-google-maps-directions';
+
 import * as Animatable from 'react-native-animatable';
 import Swiper from 'react-native-deck-swiper';
 import { Image, StyleSheet, Text, View, Button } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import navigationService from '../navigationService';
 import FullStar from './shared/FullStar';
 import HalfStar from './shared/HalfStar';
 import styles from '../styles/Cards';
@@ -15,27 +16,6 @@ class Cards extends React.Component {
     tabBarLabel: 'Locations',
     tabBarIcon: () => <Ionicons name="ios-restaurant" size={24} color={'#e32929'} />,
     barBackgroundColor: '#e32929'
-  }
-
-  navigate = (latitude, longitude) => {
-    const data = {
-      source: {
-        latitude: 36.697662,
-        longitude: -121.617915
-      },
-      destination: {
-        latitude,
-        longitude
-      },
-       params: [
-        {
-          key: "dirflg",
-          value: "d"
-        }
-      ]
-    }
-
-    getDirections(data);
   }
 
   componentDidMount = () => this.props.requestYelp();
@@ -102,7 +82,7 @@ class Cards extends React.Component {
             onSwiped={(cardIndex) => {}}
             onSwipedRight={(index) => {
               const restaurant = JSON.parse(this.props.restaurants[index]);
-              this.navigate(restaurant.coordinates.latitude, restaurant.coordinates.longitude);
+              navigationService(restaurant.coordinates.latitude, restaurant.coordinates.longitude);
             }}
             onTapCard={(index) => {
               this.props.chooseRestaurant(index);
