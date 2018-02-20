@@ -3,12 +3,13 @@ import {
     TabNavigator
 } from 'react-navigation';
 import { NavigationComponent } from 'react-native-material-bottom-navigation'
-import Home from './components/Home';
-import Cards from './components/Cards';
+import Splash from './components/Splash';
+import Cards from './containers/Cards';
 import Favorites from './components/Favorites';
+import RestaurantDetails from './containers/RestaurantDetails';
 
 const AppNavigator = StackNavigator({
-    Splash: { screen: Home, navigationOptions: { header: null } },
+    Splash: { screen: Splash, navigationOptions: { header: null } },
     Cards: { 
         screen: TabNavigator({
             Cards: {
@@ -24,10 +25,11 @@ const AppNavigator = StackNavigator({
                 headerLeft: null,
                 headerTitle: 'FIND MY BURRITO',
                 headerTitleStyle: {
-                    color: 'white'
+                    color: '#e32929',
+                    alignSelf: 'center'
                 },
                 headerStyle: {
-                    backgroundColor: '#e32929'
+                    backgroundColor: 'white'
                 }
             },
             tabBarComponent: NavigationComponent,
@@ -48,6 +50,9 @@ const AppNavigator = StackNavigator({
                 }
             }
         })
+    },
+    RestaurantDetails: {
+        screen: RestaurantDetails
     }
 });
 

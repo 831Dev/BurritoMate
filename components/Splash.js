@@ -1,8 +1,6 @@
 import React from 'react';
 import * as Animatable from 'react-native-animatable';
 import { Image, StyleSheet, Text, View } from 'react-native';
-import { connect } from 'react-redux';
-import { NavigationActions } from 'react-navigation';
 
 class Home extends React.Component {
 
@@ -21,15 +19,6 @@ class Home extends React.Component {
     }
 }
 
-const mapDispatchToProps = dispatch => ({
-    navigateTo: NavigationActions.navigate
-});
-
-const HomeContainer = connect(
-    undefined,
-    mapDispatchToProps
-)(Home);
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -45,4 +34,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default HomeContainer;
+export default Home;

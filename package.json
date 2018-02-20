@@ -19,11 +19,14 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "expo": "^25.0.0",
     "oauthsimple": "^0.0.1",
     "react": "16.2.0",
     "react-native": "0.52.0",
     "react-native-animatable": "^1.2.4",
+    "react-native-deck-swiper": "^1.4.8",
+    "react-native-google-maps-directions": "^1.1.2",
     "react-native-material-bottom-navigation": "^0.8.1",
     "react-native-swipe-cards": "^0.1.1",
     "react-navigation": "^1.0.3",
@@ -31,6 +34,7 @@
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
-    "redux-saga": "^0.16.0"
+    "redux-saga": "^0.16.0",
+    "uuid": "^3.2.1"
   }
 }

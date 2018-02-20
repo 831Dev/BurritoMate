@@ -5,7 +5,8 @@ import {
 import {
   createReduxBoundAddListener,
 } from 'react-navigation-redux-helpers';
-import { connect } from 'react-redux';
+import { Provider, connect } from 'react-redux';
+import Store from '../store'
 import Navigator from '../Navigators';  
 
 const addListener = createReduxBoundAddListener('root');
