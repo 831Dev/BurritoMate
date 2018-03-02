@@ -23,7 +23,7 @@ const AppNavigator = StackNavigator({
         }, {
             navigationOptions: {
                 headerLeft: null,
-                headerTitle: 'FIND MY BURRITO',
+                headerTitle: 'BURRITOMATE',
                 headerTitleStyle: {
                     color: '#e32929',
                     alignSelf: 'center'

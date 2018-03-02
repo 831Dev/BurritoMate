@@ -7,7 +7,7 @@ class Home extends React.Component {
     componentDidMount = () => {
         setTimeout(() => {
             this.props.navigation.dispatch({ type: 'Cards'})
-        }, 1000);
+        }, 1200);
     }
 
     render() {
