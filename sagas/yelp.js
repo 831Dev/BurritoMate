@@ -1,13 +1,12 @@
 import axios from 'axios';
 import { takeLatest, put } from 'redux-saga/effects'
+import { YELP_API_KEY } from 'react-native-dotenv';
 import { REQUEST_YELP, requestYelpSuccess } from '../reducers/restaurants';
 
-
-const API_KEY = '3j1w9eDkju_UaRG71mV_s7DfMY2GUvQS6EJpUbzSV68gh18kzBvYE0Cdk3lAhvlT51s8UW0RULObRXFDQaWReDr1yFlVQKzH7rmoSXEkcKDbRIwMaegIV3y4rY2IWnYx';
 function* getRestaurants() {
     let restaurants = null;
     const config = {
-        headers: {'Authorization': "Bearer " + API_KEY},
+        headers: {'Authorization': "Bearer " + YELP_API_KEY},
         params: {
             term: 'restaurants',
             categories: 'mexican',

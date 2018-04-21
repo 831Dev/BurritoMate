@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "jest-expo": "26.0.0",
+    "react-native-dotenv": "^0.1.1",
     "react-native-scripts": "1.13.2",
     "react-test-renderer": "16.2.0"
   },
@@ -19,8 +20,11 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "apollo-boost": "^0.1.4",
     "axios": "^0.17.1",
     "expo": "26.0.0",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.1",
     "oauthsimple": "^0.0.1",
     "react": "16.3.2",
     "react-native": "0.52.0",
