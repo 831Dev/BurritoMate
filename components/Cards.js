@@ -69,7 +69,7 @@ class Cards extends React.Component {
                 return (
                     <View style={styles.card}>
                         <Image 
-                          source={{uri: data.image_url}}
+                          source={{uri: data.photos ? data.photos[0] : data.image_url}}
                           style={{width: '100%', height: '60%'}}
                         />
                         <Text style={styles.text}>{data.name}</Text>
